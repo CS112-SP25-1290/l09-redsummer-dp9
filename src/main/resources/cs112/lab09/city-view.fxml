@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.CityController">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="cs112.lab09.controllers.EventController" padding="10">
 
-</Pane>
+    <!-- Left: Image -->
+    <left>
+        <ImageView fx:id="eventImageView" fitHeight="200" fitWidth="200"/>
+    </left>
+
+    <!-- Right: Info -->
+    <right>
+        <BorderPane>
+            <top>
+                <VBox spacing="5">
+                    <Label fx:id="locationLabel" text="Location"/>
+                    <Label fx:id="dateLabel" text="Date"/>
+                </VBox>
+            </top>
+
+            <center>
+                <VBox spacing="5">
+                    <Label fx:id="descriptionLabel" text="Original Description" wrapText="true"/>
+                    <Label fx:id="revisedDescriptionLabel" text="Revised Description" wrapText="true"/>
+                </VBox>
+            </center>
+
+            <bottom>
+                <Hyperlink fx:id="citationHyperlink" text="Source Link"/>
+            </bottom>
+        </BorderPane>
+    </right>
+
+    <!-- Bottom: Close Button -->
+    <bottom>
+        <Button fx:id="closeButton" text="Close" onAction="#handleCloseButton"/>
+    </bottom>
+
+</BorderPane>

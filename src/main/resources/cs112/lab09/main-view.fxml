@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.MainController">
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="cs112.lab09.controllers.MainController"
+      spacing="15" alignment="CENTER" padding="20">
+    
+    <TextField fx:id="appTitleField" promptText="App Title"/>
+    <TextField fx:id="appSubtitleField" promptText="App Subtitle"/>
+    <TextArea fx:id="appDescriptionArea" promptText="App Description" prefRowCount="4" wrapText="true"/>
+    <ImageView fitHeight="150" fitWidth="300"/>
 
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="startButton" text="Start" onAction="#handleStartButton"/>
+        <Button fx:id="quitButton" text="Quit" onAction="#handleQuitButton"/>
+    </HBox>
 </VBox>
